@@ -7,7 +7,9 @@ install:
   - npm install
 script:
   - npm run lint
-  - npm test
+  - npm run unit
+  - npm run coverage
+  - npm run e2eheadless
 addons:
   chrome: stable
 before_script:
