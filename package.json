@@ -5,7 +5,7 @@
   "author": "Jamie Hale <jamiesonhale@gmail.com>",
   "private": true,
   "scripts": {
-    "coverage": "jest --config test/unit/jest.conf.js --coverage | coveralls",
+    "coverage": "jest --config test/unit/jest.conf.js --coverage --coverage-reporters=lcov | coveralls",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
