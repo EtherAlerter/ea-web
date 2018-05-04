@@ -1,3 +1,4 @@
+dist: trusty
 language: node_js
 node_js:
   - "9"
@@ -7,8 +8,7 @@ script:
   - npm run lint
   - npm test
 addons:
-  sauce_connect:
-    username: "etheralerter"
-    access_key:
-      secure: "O2YOZLgEMnG3II+9qRygsJGN5RZhPNVVmOAK/aLaEluxWmkcaDzBD/4Xo1PkFjIIudJEPKSSp4LokdjB4Pl1ZRWb9urNtHeCwj8DoJPBuwuxeIz8mPpQg3Y9AB0V4smOJ9nmGd9ql869Ro7Hbc33jg4iMP2qbF0jrjhcAHhyqc3He3IkRfIpZnCcEU5/91oHQ/mwOEdkXq5uR1zgmQnrYWxgly/LAWJRDmRyzP+hG1PBLpRSNCAKAidQxgC6Do9t5dvFKQ5RklLrYofvIUtUIhBaO76DJpkdH3GkX8rw1u+mYSIKPjLobN3S42Rh/4YCJdYM4533ibLPT06YdUhxXUtW5Y53jfImrLE5t33b4AzOH0a6AhnUF4x6wHVGMnVDv+ZG9MnWLTvtdZn0x/5Bn993om+iXcqv21PUkkETYcDZz8BtK7egsjma6cd2iQzTvRt1ASzG0K3tv7XW+nPhEGK70nt/FcXMFHrQHUoasr8VyFNmtw2x3j3IraZl1KhNOIeouoUru6qOsqkAymtVbrmnnpph0x38FL0YztI9VH/9a4lUFckO1XDWBZLk1MGfQcbA8gx75uNvnodxDHbSZ10x0m7NAt5o1B8Fl7OjzYwN/1VHdIx547XBTHuW2UCjfSFm4HFNYSaGWWvA9DeXsakgnBX9BR8lzN7cmfdf/D4="
+  chrome: stable
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
